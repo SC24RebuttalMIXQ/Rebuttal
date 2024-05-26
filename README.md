@@ -42,7 +42,7 @@ $$(S\_{FP16})\_i=\frac{ {\max}\limits\_{j\notin\mathcal{O}}|(A\_{FP16})\_{ij}|} 
  
  $$\begin{align}C=\frac{\theta}{(2^{bit-1}-1)}\end{align}$$
 
-### For Reviewer 5
+### For Reviewer 2
 
 
 For question (4), the following figures show the incorrect baseline:
@@ -70,3 +70,9 @@ For question (5), the TFLOPS of `down_proj (0.1% outliers)` is lower than `up_pr
 | :---                     |    :----:   |          ---: |  ---:        |  ---:    |  ---:    |  ---:   |  ---:   |
 | TFLOPS                     | 48.007      | 93.591      | 141.468      | 213.711 | 278.463 | 347.504 | 399.033 |
 | TFLOPS  (0.1% outliers)    | 23.793     | 67.470       | 115.640       | 208.781 | 255.095 | 305.948 | 351.168 |
+
+
+
+### For Reviewer 3
+
+We have implemented an end-to-end text generation in TRT-LLM by desigening trt-llm plugging. The code is shown in [MixQ-TRT-LLM-end-to-end]
