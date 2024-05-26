@@ -13,7 +13,14 @@ The repository supplements MIXQ with tested on H100, a list of revised errors, a
 
 ### For Reviewer 5
 
-For question (4), 
+For question (4), the following figures show the incorrect baseline:
+
+![Wrong baseline](throughput-llama70b_r.jpg "Wrong baseline") 
+
+
+the following figures show the correct baseline with 1.52x speedup:
+
+![Revised baseline](throughput-llama70b_revised_baseline.jpg "Revised baseline") 
 
 For question (5), the TFLOPS of `down_proj (0.1% outliers)` is lower than `up_proj (1% outliers)` due to the different shapes of GEMM. For the `up_proj` GEMM the shape is `(bs, 11008, 4096)` and for the `down_proj`  the shape is `(bs, 4096, 11008)`. The latter is more hardware unfriendly and will results lower TFLOPS in A100. For example, for both INT8 GEMM without outliers, the TFLOPS of `up_proj` and `down_proj` is `332.7` and `278.4`, respectively. When running ```python For_reviewer_2_question_5.py``` in A100, we have:
 
