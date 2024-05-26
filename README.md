@@ -1,4 +1,6 @@
 # Rebuttal
+
+
 The repository supplements MIXQ with tested on H100, a list of revised errors, additional tests of QUIK, and end-to-end text generation in TRT-LLM using QUIK and MIXQ
 
 # Revise grammatical and spelling errors (Table I)
@@ -11,7 +13,35 @@ The repository supplements MIXQ with tested on H100, a list of revised errors, a
 | Page 9, Sec. E, line 9               |  figure out in table  V  | figure out in table  IV  | 
 | Page 9, Sec. E, line 16               |   The successive of keep accuracy |  The successive maintenance of accuracy  | 
 
+### For Reviewer 1
+ We below restated the formulas. The non-outliers are quantized as:
+ 
+ $$\begin{align}(A_{INT8})_{ij}=round\left(\frac{(A_{FP16})_{ij}}{(S_{FP16})_i}\right),j\notin\mathcal{O}\end{align}$$
+ 
+ 
+ The scaling factor is given by:
+ 
+ $$\begin{align}(S_{FP16})_i=\frac{\mathop{ \max}\limits_{j\notin\mathcal{O}}|(A_{FP16})_{ij}|} {2^{bit-1}-1}\end{align}$$
+ 
+ The output is given by:
+ 
+ $$\begin{align}C_{f16}\approx\sum_{j\in\mathcal{O}}{A_{FP16}^{j}W_{FP16}^{j}}+S^A_{FP16}S^W_{FP16}\cdot\sum_{j\notin\mathcal{O}}{A_{INT8}^{j}W_{INT8}^{j}}\end{align}$$
+ 
+ 
+ There are no new-come outliers if 
+ 
+ $$\begin{align} max(|A_{FP16}|)>\theta\end{align}$$
+ 
+ which is equivalent to 
+ 
+ $$\begin{align}max(|S_{FP16}|)>C\end{align}$$
+ 
+ where
+ 
+ $$\begin{align}C=\frac{\theta}{(2^{bit-1}-1)}\end{align}$$
+
 ### For Reviewer 5
+
 
 For question (4), the following figures show the incorrect baseline:
 
