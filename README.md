@@ -75,4 +75,4 @@ For question (5), the TFLOPS of `down_proj (0.1% outliers)` is lower than `up_pr
 
 ### For Reviewer 3
 
-We have implemented an end-to-end text generation in TRT-LLM by desigening trt-llm plugging. The code is shown in [MixQ-TRT-LLM-end-to-end]
+We have implemented an end-to-end text generation in TRT-LLM by desigening trt-llm plugging. The code is shown in [MixQ-TRT-LLM-end-to-end](https://github.com/SC24RebuttalMIXQ/Rebuttal/tree/main/MixQ-trtllm-end-to-end)
