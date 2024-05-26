@@ -23,7 +23,7 @@ The repository supplements MIXQ with tested on H100, a list of revised errors, a
  
  The scaling factor is given by:
  
-$$(S_{FP16})_i=\frac{\mathop{ \max}\limits_{j\notin\mathcal{O}}|(A_{FP16})_{ij}|} {2^{bit-1}-1}$$
+$$(S\_{FP16})\_i=\frac{\mathop{\max}\limits_{j\notin\mathcal{O}}|(A\_{FP16})\_{ij}|} {2^{bit-1}-1}$$
  
  The output is given by:
  
