@@ -91,3 +91,15 @@ CUDA_VISIBLE_DEVICES=0,1,2,3   mpirun -np 4 --allow-run-as-root    python  summa
                        --data_type fp16 \
                        --engine_dir ${out_dir}
 ```
+
+
+## Text generation result
+
+# Llama-2-7B FP16 baseline
+
+
+
+When running the ```summarize.py``` of MIXQ (Llama-2-7B in A100, 40GB, PCIE), we get:
+
+
+<img src="textmixq.jpg"  align = "center"  width="600" />
