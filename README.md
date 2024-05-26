@@ -16,7 +16,7 @@ The repository supplements MIXQ with tested on H100, a list of revised errors, a
 ### For Reviewer 1
  We below restated the formulas. The non-outliers are quantized as:
  
- $$ (A_{INT8})_{ij}  = \text{round}   (\frac{(A\_{FP16})\_{ij}}{(S_{FP16})_i} ) $$
+ $$ (A_{INT8})_{ij}=\text{round}(\frac{(A\_{FP16})\_{ij}}{(S_{FP16})_i}) $$
 
 
 $$(A_{INT8})_{ij} = round\left(\frac{(A_{FP16})_{ij}}{(S_{FP16})_i}\right),j\notin\mathcal{O}$$
